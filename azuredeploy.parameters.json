@@ -1,0 +1,43 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentazuredeploy.parameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subnetPrefix": {
+			"value": "10.0.0.0/28"
+        },
+        "addressPrefix": {
+			"value": "10.0.0.0/16"
+        },
+        "applicationGatewaySize": {
+			"value": "WAF_Medium"
+        },
+        "applicationGatewayName": {
+			"value": "CG-WEU-WAF01"
+        },
+        
+        "capacity": {
+			"value": 2
+        },
+        "backendIpaddress1": {
+			"value": "10.0.1.10"
+        },
+        "backendIpaddress2": {
+			"value": "10.0.1.11"
+        },
+        "wafEnabled": {
+			"value": true
+        },
+        "wafMode": {
+			"value": "Detection"
+        },
+        "wafRuleSetType": {
+			"value": "OWASP"
+        },
+        "location": {
+			"value": "[resourceGroup().location]",
+        },
+        "wafRuleSetVersion": {
+			"value": "3.0"
+		}
+    }
+  }
